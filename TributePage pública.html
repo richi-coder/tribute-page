@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title id="title">Tribute Page  </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+
+* {
+    box-sizing: border-box;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+html {
+    background-color: white;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: #000000;
+    width: 100%;
+    background-color: white;
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: block;
+    margin: 0 10px 0 0;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.intro {
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    margin-left: 70%;
+    width: 29%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: min(5vw, 1.2em);
+}
+
+#titulo {
+    width: 100%;
+    display: inline-block;
+    background-color: rgb(30, 31, 43);
+    margin-top: 0 30vw auto 30vw;
+    height: 5em;
+    padding: 1em;
+    max-height: 13em;
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    border-top: 1vw solid rgb(47, 66, 88);
+    border-bottom: 1vw solid rgb(47, 66, 88);
+    transition: all 0.5s ease-out;
+}
+
+#titulo h1 {
+    letter-spacing: 0.3em;
+    word-spacing: 1.2em;
+    display: inline;
+}
+
+#titulo:hover {
+    /*background-color: gray;*/
+    cursor: pointer;
+    font-size: 2.1vw;
+    border-bottom: 1vh solid rgb(160, 199, 218);
+    border-top: 1vh solid rgb(160, 199, 218);
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px 100px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2vw 7vw;
+    width: 100%;
+}
+
+.gallery div {
+    display: flex;
+    max-width: 450px;
+    width: max(350px,30vw);
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.gallery div .capa {
+    display: flex;
+    width: 100%;
+    max-width: 450px;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.gallery div img {
+    width: 100%;
+    max-width: 350px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+
+.gallery div .capa{
+    color: transparent;
+}
+
+.gallery div .capa p {
+    font-weight: bold;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    top: 80%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100%;
+}
+
+.gallery div .capa:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transition: all 0.7s;
+    z-index: 2;
+}
+
+#conPapa {
+    object-position: 0 47%;
+}
+
+#conPapa2 {
+    object-position: 0 35%;
+}
+
+#conMama {
+    object-position: 0 30%;
+}
+
+#mamaOsos {
+    object-position: 0 70%;
+}
+
+#img-div {
+    width: 100%;
+}
+
+#video {
+    display: block;
+    align-items: center;
+    width: 100%;
+    height: 50vw;
+}
+
+#tirolesa {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+
+.capa1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    background-color: #000000;
+    opacity: 0.7;
+    mix-blend-mode: overlay;
+}
+
+nav {
+    width: 100%;
+    background-color: black;
+}
+
+li {
+    width: 33,3%;
+}
+
+nav > ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 4em;
+}
+
+nav > ul > li {
+    display: block;
+    width: 33%;
+    height: 100%;
+    margin-top: 0em;
+    text-align: center;
+    padding: 1.4em;
+    font-size: 1rem;
+    transition: all .7s ease-out;
+}
+
+nav > ul > li:hover {
+    background-color: rgb(76, 100, 119);
+    cursor: pointer;
+    height: 120%;
+    border-radius: 0 0 5px 5px;
+    font-size: 1.1rem;
+    border-bottom: 1vh solid rgb(120, 137, 151);
+    color: white;
+}
+
+li > a {
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+    font-family: Tahoma;
+    font-weight: bold;
+  }
+
+.mayus {
+    color: black;
+    font-size: 10vh;
+}
+
+#fam, #sam, #can {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 2vw;
+    margin-bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3vw;
+}
+
+#family {
+    padding-top: 10vh;
+    padding-bottom: 0vh;
+    background-color: rgb(47, 66, 88);
+    color: white;
+}
+
+.container {
+    max-width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.collage {
+    display: flex;
+    width: 40%;
+}
+
+#thirdcollage {
+    margin-top: -5vw;
+    height: 10vw;
+}
+
+.collage img {
+    display: flex;
+    margin-top: 0;
+    position: relative;
+    object-fit: cover;
+    transition: all 1s ease-out;
+    cursor: pointer;
+}
+
+.first {
+    top: 5vw;    
+    left: 5vw;
+    height: 30vw;
+}
+
+
+.second {
+    top: 7vw;    
+    left: -1.5vw;
+    width: 20vw;
+}
+
+.third {
+    top: 30px;    
+    left: -20px;
+    height: 40vw;
+}
+
+.fourth {
+    top: -10vw;    
+    left: 10vw;
+    width: 50vw;
+    height: 30vw;
+}
+
+.fifth {
+    top: -8vw;    
+    left: 7vw;
+    height: 20vw;
+}
+
+.sixth {
+    top: -15px;    
+    left: 15px;
+    height: 20vw;
+    width: 25vw;
+}
+
+.seventh {
+    top: -20vw;    
+    left: 17vw;
+    height: 20vw;
+    width: 25vw;
+}
+
+#image-family:active{
+    transform: scale(2);
+    border-radius: 20px;
+    border: 5px solid rgb(72, 120, 194);
+    z-index: 2;
+}
+
+.separator {
+    width: 100%;
+    height: 2em;
+    background-color: rgb(0,0,0);
+}
+#image {
+    width: 100%;
+}
+
+.fondo {
+    background-color: rgb(47, 66, 88);
+    width: 100%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: white;
+}
+
+.blue {
+    background-color: rgb(70, 111, 199);
+}
+
+#inline {
+    display: inline;
+    margin-bottom: 15vh;
+}
+#lastImage {
+    width: 100%;
+    display: block;   
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#cantando {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#hat{
+    width: 45vw;
+    margin-left: 50vw;
+}
+
+footer {
+    background-color: black;
+    padding: 0.5vh 0 0 0;
+    color: white;
+}
+
+.galleryy div {
+    display: inline-block;
+}
+#vid {
+    margin-left: 3vw;
+    min-width: 320px;
+    aspect-ratio: 1 / 1;
+    width: 50vw;
+}
+#vidp{
+    margin-left: 3vw;
+    width: 35%;
+    text-align: justify;
+    font-size: max(1vw,2.5vw);
+}
+        </style>
+    </head>
+    <body>
+
+    <main id="main">
+    <div id="video">
+        <img id="tirolesa" src="/media/feimily.jpg">      
+        <!--<div class="capa1"></div>-->
+    </div>
+        <div id="titulo">
+            <h1><a href="#family">MY family and ME</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#conPapa">My Parents</a></li>
+                <li><a href="#mechi">My Sister</a></li>
+                <li><a href="#img-div">SAMBA</a></li>
+            </ul>
+        </nav>
+        <div id="family">
+            <div id="sam" >
+                <h2>This is my beautiful Family</h2>
+                <p>Photogallery in collage (click just one)</p>
+            </div>
+            <div class="container">
+                <div class="collage">
+                    <img class="first" id="image-family" src="/media/family.jpg">
+                    <img class="second" id="image-family" src="/media/shiambu.jpg">
+                    <img class="third" id="image-family" src="/media/feimily2.jpg">
+                    
+                </div>
+                <div class="collage">
+                    <img class="fourth" id="image-family" src="/media/mamacena.jpg">
+                    <img class="fifth" id="image-family" src="/media/feimily.jpg">
+                    <img class="sixth" id="image-family" src="/media/dad.jpg">
+
+                </div>
+                <div class="collage" id="thirdcollage">
+                    <img class="seventh" id="image-family" src="/media/momdad.jpg">
+                </div>
+        </div>
+        </div>
+        <div class="separator"></div>
+        <!--id="tribute-info" MUST USE THIS ID IN ANY ELEMENT-->    
+        <!--id="tribute-link" MUST use this with anchor element to link to another page target: _blank -->
+        <div class="gallery">
+            <span id="sam">
+                <h2>Family Members</h2>
+                <p>Dad, mom and sister</p>
+            </span>
+            <div><img id="conPapa" src="media/conPapa.jpg" alt="with Dad" loading="lazy"><div class="capa"><p>My Dad and me</p></div></div>
+            <div><img id="conPapa2" src="media/conPapa2.jpg" alt="with Dad" loading="lazy"><div class="capa"><p>My Dad and me</p></div></div>
+            <div><img id="conMama" src="media/mamayyo2.jpg" alt="with Mom" loading="lazy"><div class="capa"><p>My Mom and me</p></div></div>
+            <div><img id="mamaOsos" src="media/mamaosos.jpg" alt="Mom" loading="lazy"><div class="capa"><p>My Mom</p></div></div>
+            <div><img id="mechi" src="media/mechi.jpg" alt="Sister" loading="lazy"><div class="capa"><p>My Sister</p></div></div>
+            <div><img id="conMechi" src="media/conMechi.jpg" alt="with Sister" loading="lazy"><div class="capa"><p>My Sister and me</p></div></div>
+            <div><img src="media/richi.jpg" alt="me" loading="lazy"><div class="capa"><p></p></div></div>
+            <div><img src="media/yo.jpg" alt="me" loading="lazy"><div class="capa"><p></p></div></div>
+            <div><img src="media/mamayyo.jpg" alt="with Mom" loading="lazy"><div class="capa"><p></p></div></div>
+            <div><img src="media/dad.jpg" alt="dad" loading="lazy"><div class="capa"><p></p></div></div>
+            <div><img src="media/licor.jpg" alt="whisky" loading="lazy"><div class="capa"><p></p></div></div>
+        </div>
+        <div class="separator blue"></div>
+        <div id="img-div">
+            <div id="sam">
+                <h2>This is SAMBA</h2>
+                <p>She enjoys a lot eating chicken breast</p>
+            </div>
+            <figure>
+                <legend id="img-caption">
+                    <img id="image" src="/media/samba.jpg" loading="lazy">
+                </legend>
+            </figure>
+        </div>
+        <div class="separator"></div>
+        <div class="fondo">
+            <div id="can">
+                <h2>Aquí una cantaita</h2>
+                <p>Te esperaré</p>
+            </div>
+            <div class="galleryy">
+                    <div id="vid">
+                        <iframe id="cantando" width="320" height="472" src="https://www.youtube.com/embed/0SgXK5HZ_BM" title="yoCantando" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div id="vidp">
+                        <p>Hi, mi name is Richard, and I want to say that I am just learning to code, because I want to become a programmer.
+                        </p>
+                    </div>
+            </div>
+            <div id="can" id="inline">
+                <h2>Shoo cantando</h2>
+                <p>Te esperaré</p>
+            </div>
+            <div class="block">
+            <img id="hat" src="media/myhat.jpg" alt="me with hat" loading="lazy">
+            </div>
+        </div>
+        <div class="separator blue"></div>
+    </main>
+
+    <footer>
+        <div id="can" id="sing">
+            <h2>Thank you for meeting my family</h2>
+            <p>I wish you a great life!</p>
+        </div>
+        <img id="lastImage" src="media/lastImage.jpg" alt="lastImage" loading="lazy">
+        <div class="separator blue"></div>
+    </footer>
+
+        <script>let video = document.querySelector("video");
+            video.playbackRate = 0.5;</script>
+    </body>
+</html>
