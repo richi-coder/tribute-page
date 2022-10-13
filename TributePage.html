@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title id="title">Tribute Page  </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+    <main id="main">
+    <div id="video">
+        <img id="tirolesa" src="/media/feimily.jpg">      
+        <!--<div class="capa1"></div>-->
+    </div>
+        <div id="titulo">
+            <h1><a href="#family">MY family and ME</a></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#conPapa">My Parents</a></li>
+                <li><a href="#mechi">My Sister</a></li>
+                <li><a href="#img-div">SAMBA</a></li>
+            </ul>
+        </nav>
+        <div id="family">
+            <div id="sam" >
+                <h2>This is my beautiful Family</h2>
+                <p>Photogallery in collage (click just one)</p>
+            </div>
+            <div class="container">
+                <div class="collage">
+                    <img class="first" id="image-family" src="/media/family.jpg">
+                    <img class="second" id="image-family" src="/media/shiambu.jpg">
+                    <img class="third" id="image-family" src="/media/feimily2.jpg">
+                    
+                </div>
+                <div class="collage">
+                    <img class="fourth" id="image-family" src="/media/mamacena.jpg">
+                    <img class="fifth" id="image-family" src="/media/feimily.jpg">
+                    <img class="sixth" id="image-family" src="/media/dad.jpg">
+
+                </div>
+                <div class="collage" id="thirdcollage">
+                    <img class="seventh" id="image-family" src="/media/momdad.jpg">
+                </div>
+        </div>
+        </div>
+        <div class="separator"></div>
+        <!--id="tribute-info" MUST USE THIS ID IN ANY ELEMENT-->    
+        <!--id="tribute-link" MUST use this with anchor element to link to another page target: _blank -->
+        <div class="gallery">
+            <span id="sam">
+                <h2>Family Members</h2>
+                <p>Dad, mom and sister</p>
+            </span>
+            <div><img id="conPapa" src="media/conPapa.jpg" alt="with Dad"><div class="capa"><p>My Dad and me</p></div></div>
+            <div><img id="conPapa2" src="media/conPapa2.jpg" alt="with Dad"><div class="capa"><p>My Dad and me</p></div></div>
+            <div><img id="conMama" src="media/mamayyo2.jpg" alt="with Mom"><div class="capa"><p>My Mom and me</p></div></div>
+            <div><img id="mamaOsos" src="media/mamaosos.jpg" alt="Mom"><div class="capa"><p>My Mom</p></div></div>
+            <div><img id="mechi" src="media/mechi.jpg" alt="Sister"><div class="capa"><p>My Sister</p></div></div>
+            <div><img id="conMechi" src="media/conMechi.jpg" alt="with Sister"><div class="capa"><p>My Sister and me</p></div></div>
+            <div><img src="media/richi.jpg" alt="me"><div class="capa"><p></p></div></div>
+            <div><img src="media/yo.jpg" alt="me"><div class="capa"><p></p></div></div>
+            <div><img src="media/mamayyo.jpg" alt="with Mom"><div class="capa"><p></p></div></div>
+            <div><img src="media/dad.jpg" alt="dad"><div class="capa"><p></p></div></div>
+            <div><img src="media/licor.jpg" alt="whisky"><div class="capa"><p></p></div></div>
+        </div>
+        <div class="separator blue"></div>
+        <div id="img-div">
+            <div id="sam">
+                <h2>This is SAMBA</h2>
+                <p>She enjoys a lot eating chicken breast</p>
+            </div>
+            <figure>
+                <legend id="img-caption">
+                    <img id="image" src="/media/samba.jpg">
+                </legend>
+            </figure>
+        </div>
+        <div class="separator"></div>
+        <div class="fondo">
+            <div id="can">
+                <h2>Aquí una cantaita</h2>
+                <p>Te esperaré</p>
+            </div>
+            <div class="galleryy">
+                    <div id="vid">
+                        <iframe id="cantando" width="320" height="472" src="https://www.youtube.com/embed/0SgXK5HZ_BM" title="yoCantando" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div id="vidp">
+                        <p>Hi, mi name is Richard, and I want to say that I am just learning to code, because I want to become a programmer.
+                        </p>
+                    </div>
+            </div>
+            <div id="can" id="inline">
+                <h2>Shoo cantando</h2>
+                <p>Te esperaré</p>
+            </div>
+            <div class="block">
+            <img id="hat" src="media/myhat.jpg" alt="">
+            </div>
+        </div>
+        <div class="separator blue"></div>
+    </main>
+
+    <footer>
+        <div id="can" id="sing">
+            <h2>Thank you for meeting my family</h2>
+            <p>I wish you a great life!</p>
+        </div>
+        <img id="lastImage" src="media/lastImage.jpg" alt="">
+        <div class="separator blue"></div>
+    </footer>
+
+        <script>let video = document.querySelector("video");
+            video.playbackRate = 0.5;</script>
+    </body>
+</html>
